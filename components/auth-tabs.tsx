@@ -8,6 +8,7 @@ import { router, usePathname } from "expo-router";
 const AuthTabs = () => {
   const pathname = usePathname();
   console.log("Current Pathname:", pathname);
+
   return (
     <SafeAreaView edges={["top"]} className="py-10 px-6">
       <Image
@@ -30,8 +31,8 @@ const AuthTabs = () => {
       <View className="mt-6">
         <View className="w-full p-0.5 h-[42px] flex flex-row items-center bg-[#F8F9FA]">
           <Pressable
-            onPress={() => {
-              router.push("/(auth)/(tabview)/register");
+            onPress={() => { 
+              router.push("/verification");
             }}
             className={classNames(
               "h-full flex flex-row items-center grow text-center justify-center",
@@ -43,8 +44,8 @@ const AuthTabs = () => {
             <Text>Sign Up</Text>
           </Pressable>
           <Pressable
-            onPress={() => {
-              router.push("/(auth)/(tabview)/login");
+            onPress={() => { 
+              router.push("/verification");
             }}
             className={classNames(
               "h-full flex flex-row items-center grow text-center justify-center",
@@ -53,7 +54,7 @@ const AuthTabs = () => {
                 : "bg-transparent"
             )}
           >
-            <Text>Login Up</Text>
+            <Text>Login</Text>
           </Pressable>
         </View>
       </View>

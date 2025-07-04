@@ -1,5 +1,3 @@
-import VerificationScreen from '../../components/VerificationScreen';
+import OtpScreen from '../(auth)/otp';
 
-export default function Page() {
-  return <VerificationScreen />;
-}
+export default OtpScreen;

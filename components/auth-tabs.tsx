@@ -10,7 +10,7 @@ const AuthTabs = () => {
   console.log("Current Pathname:", pathname);
 
   return (
-    <SafeAreaView edges={["top"]} className="py-10 px-6">
+    <SafeAreaView edges={["top"]} className=" px-6 mt-10">
       <Image
         source={require("../assets/Logo.svg")}
         contentFit="contain"
@@ -32,7 +32,7 @@ const AuthTabs = () => {
         <View className="w-full p-0.5 h-[42px] flex flex-row items-center bg-[#F8F9FA]">
           <Pressable
             onPress={() => { 
-              router.push("/verification");
+              router.push("/(auth)/(tabview)/register");
             }}
             className={classNames(
               "h-full flex flex-row items-center grow text-center justify-center",
@@ -45,7 +45,7 @@ const AuthTabs = () => {
           </Pressable>
           <Pressable
             onPress={() => { 
-              router.push("/verification");
+              router.push("/(auth)/(tabview)/login");
             }}
             className={classNames(
               "h-full flex flex-row items-center grow text-center justify-center",
@@ -54,7 +54,7 @@ const AuthTabs = () => {
                 : "bg-transparent"
             )}
           >
-            <Text>Login</Text>
+            <Text>Log In</Text>
           </Pressable>
         </View>
       </View>
